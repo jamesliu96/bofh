@@ -23,7 +23,7 @@ server.on("request", function (req, res) {
             "<title>BOFH Style Excuses</title>\n</head>\n<body>\n" +
             "<center>\n<h1>" +
             excuse +
-            "</h1>\n<p>Server by <a href=\"http://g.jamesliu.info/\" target=\"_blank\">James Liu</p>\n" +
+            "</h1>\n<p>Server by <a href=\"http://g.jamesliu.info/\" target=\"_blank\">James Liu</a></p>\n" +
             "<p>List by <a href=\"http://pages.cs.wisc.edu/~ballard/\" target=\"_blank\">Jeff Ballard</a></p>" +
             "</center>\n</body>\n</html>";
     if (content) {
