@@ -1,13 +1,14 @@
 var http = require('http');
 var fs = require('fs');
 
-var file = "/var/bofh/excuses";
+var file = "/var/www/excuses";
 
 var server = new http.Server();
 var port = 8787;
 
 var data = excuses = excuse = content = "";
 var select = 0;
+var time = new Date();
 
 server.on("request", function (req, res) {
     var data = fs.readFileSync(file, "utf-8");
@@ -18,14 +19,16 @@ server.on("request", function (req, res) {
     } else {
         excuse = "ERROR!\nCANNOT ACCESS THE EXCUSE FILE!\nDON\'T EXPECT THE REST TO WORK!";
     }
-    content = "<!DOCTYPE html><html><body><head><meta charset=\"utf-8\">" +
-            "<title>BOFH Style Excuses</title></head><body>" +
-            "<center><h1>" +
+    content = "<!DOCTYPE html>\n<html>\n<body>\n<head>\n<meta charset=\"utf-8\">\n" +
+            "<title>BOFH Style Excuses</title>\n</head>\n<body>\n" +
+            "<center>\n<h1>" +
             excuse +
-            "</h1></center></body></html>";
+            "</h1>\n<p>Server by <a href=\"http://g.jamesliu.info/\" target=\"_blank\">James Liu</p>\n" +
+            "<p>List by <a href=\"http://pages.cs.wisc.edu/~ballard/\" target=\"_blank\">Jeff Ballard</a></p>" +
+            "</center>\n</body>\n</html>";
     if (content) {
         res.writeHead(200, {"Content-Type": "text/html"});
-        console.log(select,excuse);
+        console.log(time, select, excuse);
         res.write(content);
     } else {
         res.writeHead(500, {"Content-Type": "text/plain"});
