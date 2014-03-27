@@ -8,12 +8,14 @@ BOFH Style Excuses [list](https://raw.githubusercontent.com/jamesliu96/bofh/mast
 
 [Original Work](http://pages.cs.wisc.edu/~ballard/bofh/bofhserver.pl) written in Perl.
 
+Online [DEMO](http://www.jamesliu.info:8787) (if it's not working, that's fine because my poor server dies sometimes).
+
 Use the code
 ------
 
 - `bofh.js` (node.js server script, independent on extra modules)
 
-Configure
+Configure & Setup
 ------
 
 Modify the `port` variable to fit your system settings and run:
