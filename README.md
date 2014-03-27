@@ -1,8 +1,6 @@
 BOFH Style Excuses
 ======
 
-[![Build Status](https://travis-ci.org/jamesliu96/bofh.png)](https://travis-ci.org/jamesliu96/bofh)
-
 Introduction
 ------
 
