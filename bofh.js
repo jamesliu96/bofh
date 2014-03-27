@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 
-var file = "/Users/jamesliu96/Desktop/bofh/excuses";
+var file = "/var/bofh/excuses";
 
 var server = new http.Server();
 var port = 8787;
