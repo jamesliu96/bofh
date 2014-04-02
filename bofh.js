@@ -19,8 +19,8 @@ server.on("request", function (req, res) {
     } else {
         excuse = "ERROR!\nCANNOT ACCESS THE EXCUSE FILE!\nDON\'T EXPECT THE REST TO WORK!";
     }
-    content = "<!DOCTYPE html>\n<html>\n<body>\n<head>\n<meta charset=\"utf-8\">\n" +
-            "<title>BOFH Style Excuses</title>\n</head>\n<body>\n" +
+    content = "<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n" +
+            "<title>BOFH Style Excuses</title>\n<style type=\"text/css\">body{font-family:monospace,sans-serif;}</style>\n</head>\n<body>\n" +
             "<center>\n<h1>" +
             excuse +
             "</h1>\n<p>Server by <a href=\"http://g.jamesliu.info/\" target=\"_blank\">James Liu</a></p>\n" +
