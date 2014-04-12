@@ -24,7 +24,7 @@ server.on("request", function (req, res) {
             "<center>\n<h1>" +
             excuse +
             "</h1>\n<p>Server by <a href=\"http://g.jamesliu.info/\" target=\"_blank\">James Liu</a></p>\n" +
-            "<p>List by <a href=\"http://pages.cs.wisc.edu/~ballard/\" target=\"_blank\">Jeff Ballard</a></p>" +
+            "<p><a href=\"https://raw.githubusercontent.com/jamesliu96/bofh/master/excuses\" target=\"_blank\">List</a> by <a href=\"http://pages.cs.wisc.edu/~ballard/bofh/\" target=\"_blank\">Jeff Ballard</a></p>" +
             "</center>\n</body>\n</html>";
     if (content) {
         res.writeHead(200, {"Content-Type": "text/html"});
